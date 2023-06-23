@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GeradorObstaculos : MonoBehaviour
 {
-    [SerializeField] private float tempoGeraObstaculo = 3 ;
+    [SerializeField] private float tempoGeraObstaculo = 3;
     private float cronometro;
     [SerializeField] private GameObject obstaculo;
     private void Awake()

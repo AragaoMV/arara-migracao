@@ -20,6 +20,7 @@ public class PassaroController : MonoBehaviour
     }
     private void Impulsionar()
     {
+        this.fisica.velocity = Vector2.zero;
         this.fisica.AddForce(Vector2.up * forca, ForceMode2D.Impulse);
     }
 }

@@ -5,8 +5,23 @@ using UnityEngine;
 public class ObstaculoController : MonoBehaviour
 {
     [SerializeField] private float velocidade;
-    void Update()
+    [SerializeField] private float variacaoY;
+    private void Awake()
     {
-        this.transform.Translate(Vector3.left * velocidade);
+        this.transform.Translate(Vector3.up * Random.Range(-variacaoY, variacaoY));
+    }
+    private void Update()
+    {
+        this.transform.Translate(Vector3.left * velocidade * Time.deltaTime);
+    }
+    private void OnTriggerEnter2D(Collider2D outro)
+    {
+        this.Deletar();
+    }
+
+    private void Deletar()
+    {
+        GameObject.Destroy(this.gameObject);
     }
 }
+
