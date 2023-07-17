@@ -8,7 +8,6 @@ public class ObstaculoController : MonoBehaviour
     [SerializeField] private float variacaoY;
     private Vector3 posicaoArara;
     [SerializeField] private GameObject arara;
-    private bool pontuei;
 
     private void Start()
     {
@@ -22,11 +21,6 @@ public class ObstaculoController : MonoBehaviour
     {
         this.transform.Translate(Vector3.left * velocidade * Time.deltaTime);
 
-        if (!this.pontuei && this.transform.position.x < posicaoArara.x) ;
-        {
-            Debug.Log("Ponto");//Corrigir a logica da pontuação
-            this.pontuei = true;
-        }
     }
     private void OnTriggerEnter2D(Collider2D outro)
     {
