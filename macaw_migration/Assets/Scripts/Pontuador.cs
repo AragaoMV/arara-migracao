@@ -23,5 +23,18 @@ public class Pontuador : MonoBehaviour
         Debug.Log(ponto);
         this.textoPontuacao.text = this.ponto.ToString();
         this.audioPontuacao.Play();
+
+        if (ponto > 20 )
+        {
+            Time.timeScale = 1.3f;
+        }
+        if (ponto > 40)
+        {
+            Time.timeScale = 1.5f;
+        }
+        if (ponto>60)
+        {
+            Time.timeScale = 2;
+        }
     }
 }
